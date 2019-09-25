@@ -12,7 +12,15 @@ const state = {
     senha: ''
   },
   usuarioLogado: false,
-  titulos: []
+  titulos: [
+      { nomeDoLivro: 'livro0', reservado: false, emprestado: false },
+      { nomeDoLivro: 'livro1', reservado: false, emprestado: false },
+      { nomeDoLivro: 'livro2', reservado: false, emprestado: false },
+      { nomeDoLivro: 'livro3', reservado: false, emprestado: false },
+      { nomeDoLivro: 'livro4', reservado: false, emprestado: false },
+      { nomeDoLivro: 'livro5', reservado: false, emprestado: false },
+      { nomeDoLivro: 'livro6', reservado: false, emprestado: false },
+  ]
 };
 
 const getters = {

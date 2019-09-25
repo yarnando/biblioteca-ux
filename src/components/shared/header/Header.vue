@@ -4,7 +4,14 @@
 
         <b-navbar-nav class="ml-auto" v-if="$store.getters.usuarioLogado">
             <b-nav-text>
-                <a @click="sair" href="#">Sair</a>
+                <b-row>
+                    <b-col><span>Seja bem vindo, {{$store.getters.usuario.nome}}</span></b-col>
+                </b-row>
+                <b-row class="text-right">
+                    <b-col>
+                        <b-col><a @click="sair" href="#">Sair</a></b-col>
+                    </b-col>
+                </b-row>
             </b-nav-text>
         </b-navbar-nav>
 
