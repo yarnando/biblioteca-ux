@@ -1,39 +1,60 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from "vue";
+import Vuex from "vuex";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 const state = {
-  loading: false,
-  message: {type: '', text: ''},
-  userLogged: null,
-  books: []
-}
+  carregando: false,
+  mensagem: "",
+  tipoMsg: "",
+  usuario: {
+    nome: '',
+    senha: ''
+  },
+  usuarioLogado: false,
+  titulos: []
+};
 
 const getters = {
-  loading: state => state.loading,
-  message: state => state.message,
-  userLogged: state => state.userLogged,
-  books: state => state.books,
-}
+  carregando: store => store.carregando,
+  mensagem: store => store.mensagem,
+  tipoMsg: store => store.tipoMsg,
+  usuario: store => store.usuario,
+  nomeUsuario: store => store.usuario.nome,
+  senhaUsuario: store => store.usuario.senha,
+  usuarioLogado: store => store.usuarioLogado,
+  titulos: state => state.titulos
+};
 
-const mutations = { 
-  loading(state, obj) {
-      state.loading = obj;
+const mutations = {
+  carregando(state, obj) {
+    state.carregando = obj;
   },
-  message(state, obj) {
-      state.message = obj;
-  }, 
-  userLogged(state, obj) {
-    state.userLogged = obj;
-  },              
-  books(state, obj) {
-    state.books = obj;
-  },              
-}
+  mensagem(state, obj) {
+    state.mensagem = obj;
+  },
+  tipoMsg(state, obj) {
+    state.tipoMsg = obj;
+  },
+  usuario(state, obj) {
+    state.usuario = obj;
+  },
+  nomeUsuario(state, obj) {
+    state.usuario.nome = obj;
+  },
+  senhaUsuario(state, obj) {
+    state.usuario.senha = obj;
+  },
+  usuarioLogado(state, obj) {
+    state.usuarioLogado = obj;
+  },
+  titulos(state, obj) {
+    state.titulos = obj;
+  }
+};
 
 export default new Vuex.Store({
-    state,
-    getters,
-    mutations,
-  })
+  state,
+  getters,
+  mutations
+});

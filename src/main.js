@@ -18,6 +18,21 @@ export const router = new VueRouter({
 //Imports relativos ao VueX
 import store from './store' 
 
+//Relativos ao VeeValidate, validador de forms
+import VeeValidate from 'vee-validate';
+import msg from './pt_BR'; //tradução pra portugues
+Vue.use(VeeValidate, {
+
+    fieldsBagName: 'formFields',
+    locale: 'pt_BR',
+    dictionary: {
+      pt_BR: {
+        messages: msg
+      }
+    },
+    events: 'change'
+  
+  });
 
 Vue.config.productionTip = false
 

@@ -2,8 +2,10 @@
     <b-navbar type="dark" variant="dark" class="mb-4">
         <b-navbar-brand href="#">Biblioteca</b-navbar-brand>
 
-        <b-navbar-nav class="ml-auto">
-            <b-nav-text>Navbar text</b-nav-text>
+        <b-navbar-nav class="ml-auto" v-if="$store.getters.usuarioLogado">
+            <b-nav-text>
+                <a @click="sair" href="#">Sair</a>
+            </b-nav-text>
         </b-navbar-nav>
 
     </b-navbar>
@@ -11,7 +13,12 @@
 
 <script>
 export default {
-
+    methods: {
+        sair() {
+            this.$store.commit('usuarioLogado', false)
+            this.$router.push('signin')
+        }
+    }
 }
 </script>
 
