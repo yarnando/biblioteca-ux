@@ -1,19 +1,23 @@
 <template>
   <div id="app">
       <header>
-          Header
+          <Header/>
       </header>
 
-      <main>
+      <main class="container">
           <router-view></router-view>
       </main>
   </div>
 </template>
 
 <script>
+import Header from './components/shared/header/Header.vue'
 
 export default {
   name: 'app',
+  components: {
+      Header
+  }
 }
 </script>
 
