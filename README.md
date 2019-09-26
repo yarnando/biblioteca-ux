@@ -1,4 +1,7 @@
 # biblioteca-ux
+```
+Sistema de controle de livros para um trabalho de Engenharia e Usabilidade da Estácio
+```
 
 ## Project setup
 ```
