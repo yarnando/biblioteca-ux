@@ -5,7 +5,7 @@ export const routes = [
     },  
     {
         path: '/',
-        name: "root",
+        name: "signin",
         component: () => import('./components/pages/auth/Signin/Signin.vue')
     },
     {

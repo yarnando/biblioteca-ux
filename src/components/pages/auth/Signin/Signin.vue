@@ -46,7 +46,7 @@
     </b-row>    
     <b-row>
         <b-col>
-            <b-button class="mb-1" variant="primary" @click="entrar">
+            <b-button :disabled="!formValido" class="mb-1" variant="primary" @click="entrar">
                 <b-spinner style="width: 1.5rem; height: 1.5rem;" v-if="$store.getters.carregando" label="Spinning"></b-spinner>
                 <span v-else>Entrar</span>
             </b-button>
@@ -67,7 +67,17 @@ export default {
             nome: '',
             senha: ''
         }        
-    },    
+    },   
+    computed: { 
+        formValido: function() {
+            if(this.errors.items.length > 0 ||
+                this.nomeUsuario.length == 0 || 
+                this.senhaUsuario.length == 0 ) {
+                    return false
+                }
+                return true
+       }
+    },       
     methods: {
         entrar() {
             this.$store.commit('carregando', true)

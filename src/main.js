@@ -30,7 +30,6 @@ Vue.use(VeeValidate, {
         messages: msg
       }
     },
-    events: 'change'
   
   });
 

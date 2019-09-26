@@ -1,10 +1,10 @@
 <template>
   <div>
       <b-row class="mt-3 mb-2">
-        <b-col lg="7">
+        <b-col lg="4" class="text-center text-md-left my-1 my-md-0">
           <h4> <i class="fa fa-arrow-right"></i>Meus empréstimos</h4> 
         </b-col>          
-        <b-col lg="5">
+        <b-col lg="4" class="text-center my-1 my-md-0">
           <b-input-group size="sm">
             <b-form-input
               v-model="filter"
@@ -16,6 +16,9 @@
               <b-button :disabled="!filter" @click="filter = ''">Limpar</b-button>
             </b-input-group-append>
           </b-input-group> 
+        </b-col>
+        <b-col lg="4" class="text-center text-md-right my-1 my-md-0">
+            <b-button @click="$router.push('search')" size="sm">Voltar para a pesquisa de títulos</b-button>
         </b-col>
       </b-row>
       <b-row>

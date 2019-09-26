@@ -10,8 +10,10 @@
                 :onClose="() => true">
         </mensagem>          
 
-      <main class="container conteudo">
-          <router-view></router-view>
+      <main>
+          <section :class="`container conteudo ${($route.name == 'signup') || ($route.name == 'signin') ? 'conteudo-menor' : ''}`">
+            <router-view></router-view>
+          </section>
       </main>
   </div>
 </template>

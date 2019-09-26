@@ -1,5 +1,5 @@
 <template>
-    <b-navbar type="dark" variant="dark" class="mb-4">
+    <b-navbar type="dark" variant="dark">
         <b-navbar-brand href="#">Biblioteca</b-navbar-brand>
 
         <b-navbar-nav class="ml-auto" v-if="$store.getters.usuarioLogado">
