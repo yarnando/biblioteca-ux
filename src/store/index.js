@@ -13,14 +13,18 @@ const state = {
   },
   usuarioLogado: false,
   titulos: [
-      { nomeDoLivro: 'livro0', reservado: false, emprestado: false },
-      { nomeDoLivro: 'livro1', reservado: false, emprestado: false },
-      { nomeDoLivro: 'livro2', reservado: false, emprestado: false },
-      { nomeDoLivro: 'livro3', reservado: false, emprestado: false },
-      { nomeDoLivro: 'livro4', reservado: false, emprestado: false },
-      { nomeDoLivro: 'livro5', reservado: false, emprestado: false },
-      { nomeDoLivro: 'livro6', reservado: false, emprestado: false },
-  ]
+      { nomeDoLivro: 'livro0', reservado: false, dataDevolucao: '', reservadoPorMim: false },
+      { nomeDoLivro: 'livro1', reservado: true, dataDevolucao: '12/10/2019', reservadoPorMim: true },
+      { nomeDoLivro: 'livro2', reservado: false, dataDevolucao: '', reservadoPorMim: false },
+      { nomeDoLivro: 'livro3', reservado: false, dataDevolucao: '', reservadoPorMim: false },
+      { nomeDoLivro: 'livro4', reservado: true, dataDevolucao: '26/10/2019', reservadoPorMim: true },
+      { nomeDoLivro: 'livro4', reservado: true, dataDevolucao: '15/10/2019', reservadoPorMim: true },
+      { nomeDoLivro: 'livro5', reservado: true, dataDevolucao: '12/10/2019', reservadoPorMim: false },
+      { nomeDoLivro: 'livro6', reservado: true, dataDevolucao: '17/10/2019', reservadoPorMim: false },
+      { nomeDoLivro: 'livro7', reservado: false, dataDevolucao: '', reservadoPorMim: false },
+      { nomeDoLivro: 'livro8', reservado: false, dataDevolucao: '', reservadoPorMim: false },
+  ],
+  tituloSelecionado: null
 };
 
 const getters = {
@@ -31,7 +35,8 @@ const getters = {
   nomeUsuario: store => store.usuario.nome,
   senhaUsuario: store => store.usuario.senha,
   usuarioLogado: store => store.usuarioLogado,
-  titulos: state => state.titulos
+  titulos: state => state.titulos,
+  tituloSelecionado: state => state.tituloSelecionado
 };
 
 const mutations = {
@@ -58,6 +63,9 @@ const mutations = {
   },
   titulos(state, obj) {
     state.titulos = obj;
+  },
+  tituloSelecionado(state, obj) {
+    state.tituloSelecionado = obj;
   }
 };
 

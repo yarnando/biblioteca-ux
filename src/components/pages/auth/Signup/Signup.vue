@@ -47,7 +47,7 @@
     <b-row>
         <b-col>
             <b-button class="mb-1" variant="primary" @click="cadastrar">
-                <b-spinner v-if="$store.getters.carregando" label="Spinning"></b-spinner>
+                <b-spinner style="width: 1.5rem; height: 1.5rem;" v-if="$store.getters.carregando" label="Spinning"></b-spinner>
                 <span v-else>Cadastrar</span>
             </b-button>
             <router-link :to="'signin'">

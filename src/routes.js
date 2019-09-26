@@ -17,12 +17,7 @@ export const routes = [
         path: '/loan',
         name: "loan",
         component: () => import('./components/pages/library/Loan/Loan.vue'),          
-    },        
-    {
-        path: '/reserve',
-        name: "reserve",
-        component: () => import('./components/pages/library/Reserve/Reserve.vue'),            
-    },        
+    },              
     {
         path: '/search',
         name: "search",

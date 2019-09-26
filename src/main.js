@@ -34,6 +34,10 @@ Vue.use(VeeValidate, {
   
   });
 
+// CSS global
+import './global.css'
+
+
 Vue.config.productionTip = false
 
 new Vue({
