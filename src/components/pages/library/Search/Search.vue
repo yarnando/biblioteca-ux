@@ -29,7 +29,7 @@
                         responsive
                         stacked="md"
                         show-empty
-                        empty-filtered-text="Não há registros para exibir com as configurações selecionadas"
+                        empty-filtered-text="Não há títulos para exibir com as configurações selecionadas"
                         small
                         bordered
                         table-class="text-center"
