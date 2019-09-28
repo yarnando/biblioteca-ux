@@ -58,7 +58,7 @@ export default {
                 },                                
                 {
                   key: 'dataDevolucao',
-                  label: 'Data de Devolução',
+                  label: 'Devolução Prevista Para',
                 },                                    
             ],  
             indexTituloReservado: null              
