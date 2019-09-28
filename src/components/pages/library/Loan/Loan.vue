@@ -29,7 +29,8 @@
                         responsive
                         stacked="md"
                         show-empty
-                        empty-filtered-text="Não há registros para exibir com as configurações selecionadas"
+                        empty-text="Você ainda não fez nenhuma reserva"
+                        empty-filtered-text="Não há reservas para exibir com as configurações selecionadas"
                         small
                         bordered
                         table-class="text-center"
